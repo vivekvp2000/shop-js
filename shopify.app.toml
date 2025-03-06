@@ -1,0 +1,36 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "c8ddc871048e1cd52e1f2bb49c8defbb"
+application_url = "https://recommends-headphones-generous-infection.trycloudflare.com"
+embedded = true
+name = "shop-js"
+handle = "shop-js"
+
+[webhooks]
+api_version = "2025-01"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "/webhooks/app/scopes_update"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://recommends-headphones-generous-infection.trycloudflare.com/auth/callback",
+  "https://recommends-headphones-generous-infection.trycloudflare.com/auth/shopify/callback",
+  "https://recommends-headphones-generous-infection.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
+
+[build]
+dev_store_url = "vivek-test-store-amirait.myshopify.com"
+automatically_update_urls_on_dev = true
