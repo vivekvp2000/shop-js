@@ -1,19 +1,49 @@
-import { Link, Outlet, useLoaderData, useRouteError } from "@remix-run/react";
+import createApp from "@shopify/app-bridge";
+import { getSessionToken } from "@shopify/app-bridge/utilities";
+
+import { Link, Outlet, useLoaderData, useRouteError, useSearchParams } from "@remix-run/react";
 import { boundary } from "@shopify/shopify-app-remix/server";
 import { AppProvider } from "@shopify/shopify-app-remix/react";
 import { NavMenu } from "@shopify/app-bridge-react";
 import polarisStyles from "@shopify/polaris/build/esm/styles.css?url";
 import { authenticate } from "../shopify.server";
+import { useEffect, useState } from "react";
 
 export const links = () => [{ rel: "stylesheet", href: polarisStyles }];
 
 export const loader = async ({ request }) => {
-  await authenticate.admin(request);
 
+  await authenticate.admin(request);
   return { apiKey: process.env.SHOPIFY_API_KEY || "" };
 };
 
 export default function App() {
+  const [sessionToken, setSessionToken] = useState(null);
+  const [searchParams] = useSearchParams();
+
+  const appConfig = {
+    apiKey: "c8ddc871048e1cd52e1f2bb49c8defbb",
+    host: searchParams.get("host"),
+  };
+  const app = createApp(appConfig);
+
+  useEffect(() => {
+    const app = createApp(appConfig);
+
+    async function fetchSessionToken() {
+      try {
+        const token = await getSessionToken(app);
+        setSessionToken(token);
+        console.log("Session Token:", token);
+      } catch (error) {
+        console.error("Error fetching session token:", error);
+      }
+    }
+
+    fetchSessionToken();
+  }, []);
+
+
   const { apiKey } = useLoaderData();
 
   return (
