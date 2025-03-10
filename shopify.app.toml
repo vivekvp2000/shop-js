@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "c8ddc871048e1cd52e1f2bb49c8defbb"
-application_url = "https://cities-johnson-alt-quilt.trycloudflare.com"
+application_url = "https://foundations-multi-restrictions-andale.trycloudflare.com"
 embedded = true
 name = "shop-js"
 handle = "shop-js"
@@ -23,9 +23,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://cities-johnson-alt-quilt.trycloudflare.com/auth/callback",
-  "https://cities-johnson-alt-quilt.trycloudflare.com/auth/shopify/callback",
-  "https://cities-johnson-alt-quilt.trycloudflare.com/api/auth/callback"
+  "https://foundations-multi-restrictions-andale.trycloudflare.com/auth/callback",
+  "https://foundations-multi-restrictions-andale.trycloudflare.com/auth/shopify/callback",
+  "https://foundations-multi-restrictions-andale.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]

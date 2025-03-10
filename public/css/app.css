@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  font-family: Inter;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.justify-end {
+  justify-content: end;
+}
+.pt-70 {
+  padding-top: 70px;
+}
+.pt-60 {
+  padding-top: 60px;
+}
+.pl-64 {
+  padding-left: 64px;
+}
+.my-15 {
+  margin-block: 15px;
+}
+.mt-15 {
+  margin-top: 15px;
+}
+.w-100 {
+  width: 100%;
+}
+.right-img {
+  height: 544px;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+
+.flex {
+  display: flex;
+}
+.section-bottom {
+  margin-bottom: 3rem;
+}
+.pl-sm {
+  padding-left: 12px;
+}
+.paragraph-clr {
+  color: #303030;
+}
+
+.custom-input-wrapper .Polaris-TextField__Backdrop::after {
+  box-shadow: none !important;
+}
+.common-btn {
+  justify-content: center;
+  align-items: center;
+  all: unset;
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.125px;
+  padding: 6px 12px;
+  background: linear-gradient(
+      180deg,
+      rgba(48, 48, 48, 0) 63.53%,
+      rgba(255, 255, 255, 0.15) 100%
+    ),
+    rgba(48, 48, 48, 1);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0rem -0.0625rem 0rem 0.0625rem rgba(0, 0, 0, 0.8) inset,
+    0rem 0rem 0rem 0.0625rem rgba(48, 48, 48, 1) inset,
+    0rem 0.03125rem 0rem 0.09375rem rgba(255, 255, 255, 0.25) inset;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.custom-input-wrapper {
+  margin-top: 1rem;
+}
+
+.custom-input-wrapper input {
+  background: #fafafa !important;
+  border: 1px solid #b4b9be !important;
+  border-radius: 5px !important;
+  height: 42px !important;
+}
+.custom-input-wrapper label {
+  color: #6c7075;
+  font-size: 12px;
+  font-weight: 400px;
+}
+.page-title h2 {
+  color: #303030;
+  font-size: 38px;
+  font-weight: 700;
+}
